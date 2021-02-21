@@ -1,11 +1,20 @@
 import React from 'react';
-import { Counter } from './features/counter/Counter';
 import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Header from './components/Header';
 
 function App() {
   return (
-    <div className="app">
-      <h1>Slaaack</h1>
+    <div className="container">
+      <Router>
+        <>
+          <Switch>
+            <Route path="/">
+              <Header />
+            </Route>
+          </Switch>
+        </>
+      </Router>
     </div>
   );
 }
