@@ -1,14 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import BorderColorOutlinedIcon from '@material-ui/icons/BorderColorOutlined';
 import ArrowDropDownTwoToneIcon from '@material-ui/icons/ArrowDropDownTwoTone';
 import SideBarOption from './SidebarOption';
-import ArrowForwardIosRoundedIcon from '@material-ui/icons/ArrowForwardIosRounded';
-import SpeakerNotesRoundedIcon from '@material-ui/icons/SpeakerNotesRounded';
-import LabelImportantRoundedIcon from '@material-ui/icons/LabelImportantRounded';
 import ArrowRightRoundedIcon from '@material-ui/icons/ArrowRightRounded';
 import AddIcon from '@material-ui/icons/Add';
 import CreateOutlinedIcon from '@material-ui/icons/CreateOutlined';
+import LabelOutlinedIcon from '@material-ui/icons/LabelOutlined';
+import SendOutlinedIcon from '@material-ui/icons/SendOutlined';
 import { useCollection } from 'react-firebase-hooks/firestore';
 import { db } from '../../firebase/firebase';
 
@@ -25,11 +23,8 @@ function Sidebar() {
         <CreateOutlinedIcon />
       </SidebarHeader>
 
-      <SideBarOption title="Threads" Icon={SpeakerNotesRoundedIcon} />
-      <SideBarOption
-        title="Mentions & Reactions"
-        Icon={LabelImportantRoundedIcon}
-      />
+      <SideBarOption title="Threads" Icon={SendOutlinedIcon} />
+      <SideBarOption title="Mentions & Reactions" Icon={LabelOutlinedIcon} />
       {/* <Line className="line"></Line> */}
       <SideBarOption title="Channels" Icon={ArrowRightRoundedIcon} />
       {/* <Line className="line"></Line> */}
