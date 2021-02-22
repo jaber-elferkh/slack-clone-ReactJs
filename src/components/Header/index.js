@@ -4,7 +4,7 @@ import { Avatar } from '@material-ui/core';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import MenuIcon from '@material-ui/icons/Menu';
 
-function Header() {
+const Header = () => {
   return (
     <HeaderContainer>
       <HeaderLeft>
@@ -21,7 +21,7 @@ function Header() {
       </HeaderRight>
     </HeaderContainer>
   );
-}
+};
 
 export default Header;
 

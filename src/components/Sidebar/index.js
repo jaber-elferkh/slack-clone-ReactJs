@@ -10,7 +10,7 @@ import SendOutlinedIcon from '@material-ui/icons/SendOutlined';
 import { useCollection } from 'react-firebase-hooks/firestore';
 import { db } from '../../firebase/firebase';
 
-function Sidebar() {
+const Sidebar = () => {
   const [channels, loading, error] = useCollection(db.collection('rooms'));
 
   return (
@@ -35,7 +35,7 @@ function Sidebar() {
       ))}
     </SidebarContainer>
   );
-}
+};
 
 export default Sidebar;
 
@@ -59,6 +59,7 @@ const SidebarHeader = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 15px;
+  border-bottom: 1px solid #2b2a2f;
 
   > .MuiSvgIcon-root {
     background-color: white;
