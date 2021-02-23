@@ -80,14 +80,14 @@ const Chat = () => {
 export default Chat;
 
 const ChatContainer = styled.div`
-  flex: 0.7;
+  /* border: 1px solid red; */
+  /* flex: 0.2; */
   flex-grow: 1;
   overflow-x: scroll;
   background-color: #1a1d21;
 `;
 
 const Header = styled.div`
-  /* border: 1px solid red; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -95,6 +95,8 @@ const Header = styled.div`
   background-color: #1a1d21;
   color: #ababad;
   padding: 22px 20px;
+  position: fixed;
+  top: 0;
 `;
 const HeaderLeft = styled.div`
   display: flex;

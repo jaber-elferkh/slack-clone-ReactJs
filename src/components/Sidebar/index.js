@@ -8,10 +8,12 @@ import CreateOutlinedIcon from '@material-ui/icons/CreateOutlined';
 import LabelOutlinedIcon from '@material-ui/icons/LabelOutlined';
 import SendOutlinedIcon from '@material-ui/icons/SendOutlined';
 import { useCollection } from 'react-firebase-hooks/firestore';
-import { db } from '../../firebase/firebase';
+import { auth, db } from '../../firebase/firebase';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 const Sidebar = () => {
-  const [channels, loading, error] = useCollection(db.collection('rooms'));
+  const [channels] = useCollection(db.collection('rooms'));
+  const [user] = useAuthState(auth);
 
   return (
     <SidebarContainer>

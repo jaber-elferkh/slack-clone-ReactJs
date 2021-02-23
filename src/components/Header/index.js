@@ -3,8 +3,14 @@ import styled from 'styled-components';
 import { Avatar } from '@material-ui/core';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import MenuIcon from '@material-ui/icons/Menu';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth } from '../../firebase/firebase';
 
 const Header = () => {
+  const [user] = useAuthState(auth);
+
+  console.log(user);
+
   return (
     <HeaderContainer>
       <HeaderLeft>
@@ -17,7 +23,7 @@ const Header = () => {
       </HeaderSearch>
 
       <HeaderRight>
-        <HeaderAvatar />
+        <HeaderAvatar onClick={() => auth.signOut()} src={user?.photoURL} />
       </HeaderRight>
     </HeaderContainer>
   );
@@ -26,6 +32,7 @@ const Header = () => {
 export default Header;
 
 const HeaderContainer = styled.div`
+  /* position: relative; */
   display: flex;
   width: 100%;
   align-items: center;

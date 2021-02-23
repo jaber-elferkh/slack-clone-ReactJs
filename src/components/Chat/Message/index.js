@@ -26,13 +26,14 @@ const MessageContainer = styled.div`
   color: white;
 
   > img {
-    height: 50px;
-    border-radius: 8px;
-    margin-right: 10px;
+    height: 40px;
+    border-radius: 50px;
+    margin-right: 15px;
   }
 `;
 const MessageInfo = styled.div`
   > h4 {
+    font-size: 15px;
     font-weight: 600;
   }
 
